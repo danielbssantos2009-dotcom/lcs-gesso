@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navbar scroll effect
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    // Video fade on scroll
+    const heroVideo = document.getElementById('heroVideo');
+    if (heroVideo) {
+        window.addEventListener('scroll', () => {
+            // Fades from 1 to 0 as you scroll down the height of the screen
+            let scrollY = window.scrollY;
+            let height = window.innerHeight;
+            let opacity = 1 - (scrollY / (height * 0.8));
+            if (opacity < 0) opacity = 0;
+            if (opacity > 1) opacity = 1;
+            heroVideo.style.opacity = opacity;
+        });
+    }
 
     // Intersection Observer for fade-up animations
     const observerOptions = {
