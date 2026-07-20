@@ -127,7 +127,7 @@ ul {
 /* Hero Wrapper & Video Section */
 .hero-wrapper {
     padding: 0;
-    background-color: var(--color-bg);
+    background-color: var(--color-surface);
 }
 
 .hero-video-section {
