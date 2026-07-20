@@ -1,12 +1,14 @@
 :root {
     --color-primary: #0D2B59;
     --color-primary-hover: #153a73;
+    --color-primary-light: #4A7ECF;
     --color-white: #ffffff;
-    --color-bg: #f8fafc;
-    --color-text-main: #334155;
-    --color-text-light: #64748b;
-    --color-border: #e2e8f0;
-    --color-footer: #0f172a;
+    --color-bg: #0B0E14;
+    --color-surface: #151A24;
+    --color-text-main: #F1F5F9;
+    --color-text-light: #94A3B8;
+    --color-border: #1E293B;
+    --color-footer: #05070A;
     --color-whatsapp: #25D366;
     --color-whatsapp-hover: #1EBE5D;
     
@@ -124,15 +126,15 @@ ul {
 
 /* Hero Wrapper & Video Section */
 .hero-wrapper {
-    padding: 16px;
-    background-color: var(--color-white);
+    padding: 0;
+    background-color: var(--color-bg);
 }
 
 .hero-video-section {
     position: relative;
     width: 100%;
-    min-height: calc(100vh - 32px);
-    border-radius: 32px;
+    min-height: 100vh;
+    border-radius: 0 0 32px 32px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -159,56 +161,78 @@ ul {
     z-index: 2;
 }
 
-/* Static Navbar */
-.navbar-static {
+/* Glassmorphism Navbar */
+.navbar-glass {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     padding: 24px 0;
-    background-color: var(--color-white);
+    z-index: 100;
+    background-color: transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navbar-content-static {
+.navbar-glass.scrolled {
+    padding: 16px 0;
+    background-color: rgba(11, 14, 20, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-content-glass {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo-dark {
+.logo {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.5rem;
-    color: var(--color-primary);
+    color: var(--color-white);
 }
 
-.nav-links-dark {
+.nav-links {
     display: flex;
     gap: 32px;
 }
 
-.nav-links-dark a {
+.nav-links a {
     font-weight: 600;
     color: var(--color-text-main);
     font-size: 0.95rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Helps visibility over video when not scrolled */
 }
 
-.nav-links-dark a:hover {
-    color: var(--color-primary);
+.navbar-glass.scrolled .nav-links a {
+    text-shadow: none;
 }
 
-.btn-nav-circle-dark {
+.nav-links a:hover {
+    color: var(--color-primary-light);
+}
+
+.btn-nav-circle {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: var(--color-primary);
+    background: rgba(255, 255, 255, 0.1);
     color: var(--color-white);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
 }
 
-.btn-nav-circle-dark:hover {
+.btn-nav-circle:hover {
     transform: scale(1.05);
-    background: var(--color-primary-hover);
+    background: var(--color-whatsapp);
+    border-color: var(--color-whatsapp);
+    color: var(--color-bg);
 }
 
 /* New Hero Content */

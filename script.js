@@ -1,10 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Video fade on scroll
     const heroSection = document.querySelector('.hero-video-section');
-    if (heroSection) {
-        window.addEventListener('scroll', () => {
-            // Fades from 1 to 0 as you scroll down the height of the screen
-            let scrollY = window.scrollY;
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+        let scrollY = window.scrollY;
+
+        // Navbar glassmorphism effect
+        if (navbar) {
+            if (scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
+        // Hero fade on scroll
+        if (heroSection) {
             let height = window.innerHeight;
             
             // Fade starts at 60% of viewport height and ends at 95%
@@ -20,8 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (opacity > 1) opacity = 1;
             
             heroSection.style.opacity = opacity;
-        });
-    }
+        }
+    });
 
     // Intersection Observer for fade-up animations
     const observerOptions = {
