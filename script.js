@@ -85,16 +85,4 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         window.requestAnimationFrame(step);
     }
-    
-    // Masterpiece Gallery Interactions
-    const galleryCards = document.querySelectorAll('.gallery-card');
-    galleryCards.forEach(card => {
-        const activateCard = () => {
-            galleryCards.forEach(c => c.classList.remove('active'));
-            card.classList.add('active');
-        };
-        
-        card.addEventListener('mouseenter', activateCard);
-        card.addEventListener('click', activateCard);
-    });
 });
