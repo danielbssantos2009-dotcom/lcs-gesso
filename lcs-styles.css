@@ -779,6 +779,46 @@ ul {
     line-height: 1.5;
 }
 
+/* Persuasive Dark Marquee Strip */
+.marquee-strip-dark {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #161616; /* very dark gray, almost black */
+    color: var(--color-white);
+    padding: 18px 0;
+    display: flex;
+    white-space: nowrap;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.marquee-content-dark {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-right: 40px;
+    animation: scroll-left-fast 35s linear infinite;
+    will-change: transform;
+}
+
+.marquee-content-dark span {
+    font-family: var(--font-primary);
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.marquee-content-dark .dot {
+    color: rgba(255,255,255,0.3);
+    font-size: 0.8rem;
+}
+
+@keyframes scroll-left-fast {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
 /* Luxury CTA Section */
 .cta-section-luxury {
     padding: 120px 0 60px;
