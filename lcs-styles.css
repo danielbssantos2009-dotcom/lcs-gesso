@@ -867,7 +867,7 @@ ul {
 
 .footer-watermark {
     text-align: center;
-    font-size: 25vw;
+    font-size: 16.5vw;
     font-family: var(--font-heading);
     font-weight: 800;
     line-height: 0.75;
@@ -875,8 +875,9 @@ ul {
     letter-spacing: -0.04em;
     user-select: none;
     pointer-events: none;
-    margin-top: -6vw;
-    margin-bottom: -5vw;
+    white-space: nowrap;
+    margin-top: -2vw;
+    margin-bottom: -4vw;
     text-transform: lowercase;
 }
 
@@ -1084,8 +1085,8 @@ ul {
     }
     
     .footer-watermark {
-        font-size: 32vw;
-        margin-top: -8vw;
-        margin-bottom: -7vw;
+        font-size: 30vw;
+        margin-top: -4vw;
+        margin-bottom: -6vw;
     }
 }
