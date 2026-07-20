@@ -149,7 +149,7 @@ ul {
     z-index: 1;
     transition: opacity 0.1s linear;
     transform: scale(1.35);
-    transform-origin: left top;
+    transform-origin: 40% top;
 }
 
 .hero-overlay {
