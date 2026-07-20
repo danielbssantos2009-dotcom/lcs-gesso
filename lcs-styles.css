@@ -553,19 +553,23 @@ ul {
 .about-panels-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 0;
     margin-bottom: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
 }
 
 .about-panel-left {
     background-color: var(--color-white);
-    border-radius: 40px;
+    border-radius: 0;
     padding: 60px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--color-border);
+    box-shadow: none;
+    border: none;
 }
 
 .about-panel-header {
@@ -613,37 +617,19 @@ ul {
     line-height: 1.2;
     color: var(--color-text-main);
     margin-bottom: 40px;
+    font-weight: 400;
 }
 
-.about-arrows {
-    display: flex;
-    gap: 15px;
+.about-main-title span {
+    font-weight: 700;
 }
 
-.arrow-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid var(--color-border);
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1.2rem;
-}
 
-.arrow-btn.active, .arrow-btn:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border-color: var(--color-primary);
-}
 
 /* Right Panel */
 .about-panel-right {
     position: relative;
-    border-radius: 40px;
+    border-radius: 0;
     overflow: hidden;
     background-color: var(--color-bg);
 }
@@ -719,17 +705,24 @@ ul {
 
 /* Differentials */
 .about-differentials {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--color-border);
+    padding-top: 30px;
+    margin-top: 20px;
 }
 
-.card.mini-card {
-    padding: 15px 20px;
-    border-radius: 20px;
-    background-color: var(--color-white);
-    border: 1px solid var(--color-border);
-    justify-content: flex-start;
+.diff-text {
+    flex: 1;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-text-main);
+    font-weight: 500;
+}
+
+.diff-text:not(:last-child) {
+    border-right: 1px solid var(--color-border);
 }
 
 /* CTA Section */
