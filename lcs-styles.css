@@ -639,8 +639,8 @@ ul {
 /* Masterpiece Section */
 .masterpiece-section {
     padding: 120px 0;
-    background-color: #081220;
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-text-main);
 }
 
 .masterpiece-header {
@@ -649,7 +649,7 @@ ul {
 
 .masterpiece-label {
     display: inline-block;
-    color: var(--color-primary-light);
+    color: var(--color-primary);
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -677,6 +677,7 @@ ul {
     border-radius: 30px;
     overflow: hidden;
     flex: 1;
+    min-width: 60px;
     cursor: pointer;
     transition: flex 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -702,7 +703,7 @@ ul {
 .card-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(8, 18, 32, 0.9) 0%, rgba(8, 18, 32, 0.3) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0,0,0,0) 100%);
     opacity: 0.6;
     transition: opacity 0.4s ease;
 }
@@ -753,11 +754,12 @@ ul {
 .card-text h3 {
     font-size: 1.6rem;
     margin-bottom: 10px;
+    color: var(--color-white);
 }
 
 .card-text p {
     font-size: 1rem;
-    color: #cbd5e1;
+    color: #e2e8f0;
     line-height: 1.5;
 }
 
@@ -1002,6 +1004,11 @@ ul {
         top: 0;
         height: 100%;
     }
+
+    .masterpiece-gallery {
+        flex-direction: column;
+        height: 800px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1032,5 +1039,9 @@ ul {
     
     .cta-content h2 {
         font-size: 2.2rem;
+    }
+
+    .masterpiece-gallery {
+        height: 600px;
     }
 }
