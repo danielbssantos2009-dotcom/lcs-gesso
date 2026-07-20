@@ -148,6 +148,8 @@ ul {
     object-fit: cover;
     z-index: 1;
     transition: opacity 0.1s linear;
+    transform: scale(1.35);
+    transform-origin: 75% 50%;
 }
 
 .hero-overlay {
