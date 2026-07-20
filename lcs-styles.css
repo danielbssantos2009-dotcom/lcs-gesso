@@ -373,13 +373,10 @@ ul {
 /* Infinite Marquee Styles */
 .marquee-wrapper {
     position: relative;
-    width: 100vw;
-    max-width: 100%;
+    width: 100%;
     overflow: hidden;
     padding: 20px 0;
     margin-bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%); /* Makes it break out of the container to be full width */
 }
 
 .marquee-mask {
@@ -465,15 +462,43 @@ ul {
 }
 
 .btn-primary-override {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover)) !important;
+    background: var(--color-primary) !important;
     color: var(--color-white) !important;
     border: none !important;
-    box-shadow: 0 8px 20px rgba(13, 43, 89, 0.25) !important;
+    padding: 18px 48px !important;
+    font-size: 1.1rem !important;
+    box-shadow: 0 10px 30px rgba(13, 43, 89, 0.3) !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary-override::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transition: left 0.6s ease;
+    z-index: -1;
+}
+
+.btn-primary-override:hover::before {
+    left: 100%;
 }
 
 .btn-primary-override:hover {
-    box-shadow: 0 12px 25px rgba(13, 43, 89, 0.4) !important;
-    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 15px 35px rgba(13, 43, 89, 0.5) !important;
+    transform: translateY(-4px) !important;
+}
+
+.btn-primary-override svg {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary-override:hover svg {
+    transform: translateX(5px);
 }
 
 /* About Section */
