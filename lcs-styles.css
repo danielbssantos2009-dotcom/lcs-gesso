@@ -339,35 +339,56 @@ ul {
 .btn-pill-cta {
     display: inline-flex;
     align-items: center;
-    gap: 16px;
-    background-color: var(--color-white);
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 8px 8px 8px 32px;
     border-radius: 100px;
-    color: var(--color-primary);
-    font-weight: 700;
+    color: var(--color-white);
+    font-weight: 500;
     font-size: 0.95rem;
-    transition: all 0.3s ease;
+    letter-spacing: 0.1em;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-pill-cta:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .btn-pill-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    transition: background-color 0.3s ease;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-pill-icon svg {
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    width: 22px;
+    height: 22px;
 }
 
 .btn-pill-cta:hover .btn-pill-icon {
-    background-color: var(--color-primary-hover);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.btn-pill-cta:hover .btn-pill-icon svg {
+    transform: translateX(4px);
 }
 /* Stats Section */
 .stats-section {
