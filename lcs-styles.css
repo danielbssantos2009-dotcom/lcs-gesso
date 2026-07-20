@@ -190,10 +190,10 @@ ul {
 }
 
 .navbar-glass.scrolled .navbar-content-glass {
-    background-color: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(11, 14, 20, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     padding: 8px 24px;
 }
