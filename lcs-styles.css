@@ -1013,7 +1013,7 @@ ul {
     position: relative;
     background: linear-gradient(to bottom, #ffffff 0%, #dbe4ef 10%, #305487 45%, #0a172a 100%);
     color: #f1f5f9;
-    padding: 250px 0 0;
+    padding: 160px 0 0;
     overflow: hidden;
     margin-top: -1px;
 }
@@ -1021,10 +1021,10 @@ ul {
 .footer-content-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 80px;
+    gap: 60px;
     position: relative;
     z-index: 2;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 }
 
 .footer-brand-col {
@@ -1038,17 +1038,17 @@ ul {
 }
 
 .footer-logo-img {
-    width: 320px; /* Increased size to compensate for huge transparent padding in PNG */
+    width: 200px; /* Reduced size */
     max-width: 100%;
     height: auto;
 }
 
 .footer-brand-col p {
     color: #e2e8f0;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    max-width: 350px;
-    margin-bottom: 30px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    max-width: 320px;
+    margin-bottom: 24px;
 }
 
 .footer-socials {
@@ -1077,26 +1077,26 @@ ul {
 .footer-links-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 30px;
 }
 
 .footer-links-col h4 {
     color: var(--color-white);
     font-family: var(--font-heading);
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .footer-links-col nav {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .footer-links-col a {
     color: #cbd5e1;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     transition: color 0.3s ease;
 }
 
