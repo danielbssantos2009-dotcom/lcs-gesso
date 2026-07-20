@@ -563,6 +563,9 @@ ul {
 .about-section {
     padding: 80px 0 100px 0;
     background-color: var(--color-surface);
+    background-image: linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center center;
     position: relative;
     overflow: hidden;
 }
@@ -570,23 +573,23 @@ ul {
 .about-deco {
     position: absolute;
     top: 50%;
-    font-size: 8vw;
+    font-size: 6vw;
     font-family: var(--font-heading);
     font-weight: 800;
-    color: rgba(15, 23, 42, 0.03);
+    color: rgba(15, 23, 42, 0.08);
     white-space: nowrap;
     pointer-events: none;
-    letter-spacing: -0.05em;
+    letter-spacing: 0.1em;
     z-index: 0;
 }
 
 .about-deco-left {
-    left: -3vw;
+    left: 2vw;
     transform: translateY(-50%) rotate(-90deg);
 }
 
 .about-deco-right {
-    right: -3vw;
+    right: 2vw;
     transform: translateY(-50%) rotate(90deg);
 }
 
