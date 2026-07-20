@@ -180,14 +180,14 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0;
     z-index: 100;
     pointer-events: none;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar-glass.scrolled {
-    padding: 6px 0;
+    padding: 12px 0;
 }
 
 .navbar-content-glass {
@@ -197,7 +197,7 @@ ul {
     align-items: center;
     background-color: transparent;
     border-radius: 100px;
-    padding: 6px 16px;
+    padding: 10px 24px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid transparent;
 }
@@ -208,7 +208,7 @@ ul {
     -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    padding: 6px 24px;
+    padding: 10px 32px;
 }
 
 /* Logo Transition */
@@ -218,13 +218,13 @@ ul {
     justify-content: center;
     position: relative;
     text-decoration: none;
-    height: 28px;
-    width: 70px;
+    height: 36px;
+    width: 100px;
 }
 
 .logo-white, .logo-dark {
     position: absolute;
-    width: 110px; /* Adjusted down dramatically */
+    width: 160px; /* Perfect middle ground size */
     max-width: none;
     height: auto;
     transition: opacity 0.4s ease;
@@ -254,7 +254,7 @@ ul {
 .nav-links a {
     font-weight: 600;
     color: var(--color-white);
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     transition: color 0.3s ease;
 }
@@ -273,14 +273,14 @@ ul {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 6px 16px;
+    padding: 8px 24px;
     border-radius: 100px;
     background: rgba(255, 255, 255, 0.15);
     color: var(--color-white);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     font-weight: 600;
 }
 
@@ -303,8 +303,8 @@ ul {
     z-index: 10;
     flex: 1;
     display: flex;
-    align-items: flex-end;
-    padding: 0 80px 80px 80px;
+    align-items: center; /* Centered vertically instead of flex-end */
+    padding: 80px 80px 0 80px; /* Adjusted padding for better vertical balance */
     justify-content: flex-start;
     width: 100%;
 }
@@ -321,12 +321,12 @@ ul {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 6px 16px;
+    padding: 8px 20px;
     border-radius: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     color: var(--color-white);
     font-weight: 500;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -343,18 +343,18 @@ ul {
 }
 
 .hero-text-new h1 {
-    font-size: 2.6rem;
+    font-size: 3.4rem;
     color: var(--color-white);
     line-height: 1.1;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     letter-spacing: -0.02em;
 }
 
 .subtitle-new {
-    font-size: 0.85rem;
+    font-size: 1.05rem;
     opacity: 0.9;
     max-width: 600px;
-    margin-bottom: 24px;
+    margin-bottom: 36px;
     font-weight: 400;
 }
 
@@ -362,16 +362,16 @@ ul {
 .btn-pill-cta {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 4px 4px 4px 20px;
+    padding: 8px 8px 8px 28px;
     border-radius: 100px;
     color: var(--color-white);
     font-weight: 500;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     letter-spacing: 0.1em;
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
@@ -389,8 +389,8 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background-color: var(--color-white);
     color: var(--color-primary);
