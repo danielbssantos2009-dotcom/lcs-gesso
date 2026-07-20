@@ -219,12 +219,12 @@ ul {
     position: relative;
     text-decoration: none;
     height: 40px;
-    width: 140px;
+    width: 110px;
 }
 
 .logo-white, .logo-dark {
     position: absolute;
-    width: 240px; /* Increased to compensate for empty PNG margins */
+    width: 180px; /* Adjusted down to fit gracefully within header */
     max-width: none;
     height: auto;
     transition: opacity 0.4s ease;
