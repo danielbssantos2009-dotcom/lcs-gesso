@@ -6,7 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
             // Fades from 1 to 0 as you scroll down the height of the screen
             let scrollY = window.scrollY;
             let height = window.innerHeight;
-            let opacity = 1 - (scrollY / (height * 0.8));
+            
+            // Fade starts at 60% of viewport height and ends at 95%
+            let startFade = height * 0.6;
+            let endFade = height * 0.95;
+            
+            let opacity = 1;
+            if (scrollY > startFade) {
+                opacity = 1 - ((scrollY - startFade) / (endFade - startFade));
+            }
+            
             if (opacity < 0) opacity = 0;
             if (opacity > 1) opacity = 1;
             
