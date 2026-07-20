@@ -784,7 +784,7 @@ ul {
     position: relative;
     width: 100%;
     overflow: hidden;
-    background-color: #161616; /* very dark gray, almost black */
+    background-color: var(--color-primary);
     color: var(--color-white);
     padding: 18px 0;
     display: flex;
