@@ -213,26 +213,29 @@ ul {
 
 /* Logo Transition */
 .logo {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     text-decoration: none;
+    height: 40px;
+    width: 140px;
+}
+
+.logo-white, .logo-dark {
+    position: absolute;
+    width: 240px; /* Increased to compensate for empty PNG margins */
+    max-width: none;
+    height: auto;
+    transition: opacity 0.4s ease;
 }
 
 .logo-white {
-    height: 32px; /* Adjustable height for header logo */
-    width: auto;
-    display: block;
-    transition: opacity 0.4s ease;
+    opacity: 1;
 }
 
 .logo-dark {
-    height: 32px;
-    width: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
     opacity: 0;
-    transition: opacity 0.4s ease;
 }
 
 .navbar-glass.scrolled .logo-white {
@@ -1035,8 +1038,9 @@ ul {
 }
 
 .footer-logo-img {
-    height: 80px; /* Size for footer full logo */
-    width: auto;
+    width: 320px; /* Increased size to compensate for huge transparent padding in PNG */
+    max-width: 100%;
+    height: auto;
 }
 
 .footer-brand-col p {
