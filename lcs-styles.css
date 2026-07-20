@@ -370,30 +370,108 @@ ul {
     font-size: 1.125rem;
 }
 
-.clients-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    align-items: center;
+/* Infinite Marquee Styles */
+.marquee-wrapper {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
     margin-bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%); /* Makes it break out of the container to be full width */
 }
 
-.client-logo {
+.marquee-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15vw;
+    min-width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.mask-left {
+    left: 0;
+    background: linear-gradient(to right, var(--color-surface) 0%, transparent 100%);
+}
+
+.mask-right {
+    right: 0;
+    background: linear-gradient(to left, var(--color-surface) 0%, transparent 100%);
+}
+
+.marquee-row {
+    display: flex;
+    width: max-content;
+    margin-bottom: 30px;
+}
+
+.marquee-row:last-child {
+    margin-bottom: 0;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 30px;
+    padding-right: 30px; /* Space between the original and duplicate */
+}
+
+/* Animations */
+.marquee-left {
+    animation: scroll-left 30s linear infinite;
+}
+
+.marquee-right {
+    animation: scroll-right 35s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+/* Client Card Placeholders */
+.client-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 120px;
+    background-color: var(--color-bg); 
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1.5rem;
-    color: #94a3b8;
+    font-size: 1.25rem;
+    color: var(--color-text-light);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    filter: grayscale(100%);
-    opacity: 0.7;
     transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
 }
 
-.client-logo:hover {
-    filter: grayscale(0%);
-    opacity: 1;
+.client-card:hover {
+    border-color: var(--color-primary-light);
     color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary-override {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    border: none !important;
+}
+
+.btn-primary-override:hover {
+    background-color: var(--color-primary-hover) !important;
 }
 
 /* About Section */

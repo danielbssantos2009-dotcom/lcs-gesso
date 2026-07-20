@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="lcs-styles.css?v=10">
+    <link rel="stylesheet" href="lcs-styles.css?v=11">
 </head>
 <body>
 
@@ -60,19 +60,56 @@
 
         <section id="clientes" class="clients-section">
             <div class="container">
-                <h2 class="section-title fade-up">Empresas que confiam na LCS Gesso</h2>
-                <p class="section-description fade-up delay-1">Ao longo dos anos participamos da execução de obras para empresas e construtoras reconhecidas, sempre entregando qualidade, organização e excelência em cada projeto.</p>
+                <h2 class="section-title fade-up">Grandes obras, parceiros de peso</h2>
+                <p class="section-description fade-up delay-1">Construímos uma base sólida de confiança entregando qualidade, cumprimento rigoroso de prazos e excelência em acabamentos para empresas renomadas.</p>
+            </div>
                 
-                <div class="clients-grid fade-up delay-2">
-                    <div class="client-logo">Yamaha</div>
-                    <div class="client-logo">UPS</div>
-                    <div class="client-logo">Rizen</div>
-                    <div class="client-logo">Construtora Coiado</div>
+            <div class="marquee-wrapper fade-up delay-2">
+                <div class="marquee-mask mask-left"></div>
+                <div class="marquee-mask mask-right"></div>
+                
+                <!-- Primeira Fileira (Para a Esquerda) -->
+                <div class="marquee-row marquee-left">
+                    <div class="marquee-content">
+                        <div class="client-card">YAMAHA</div>
+                        <div class="client-card">UPS</div>
+                        <div class="client-card">RIZEN</div>
+                        <div class="client-card">CONSTRUTORA COIADO</div>
+                        <div class="client-card">EMPRESA 5</div>
+                    </div>
+                    <div class="marquee-content" aria-hidden="true">
+                        <div class="client-card">YAMAHA</div>
+                        <div class="client-card">UPS</div>
+                        <div class="client-card">RIZEN</div>
+                        <div class="client-card">CONSTRUTORA COIADO</div>
+                        <div class="client-card">EMPRESA 5</div>
+                    </div>
                 </div>
 
-                <div class="clients-action fade-up delay-3">
-                    <a href="https://wa.me/5511964625127" target="_blank" class="btn btn-outline">Solicite um orçamento</a>
+                <!-- Segunda Fileira (Para a Direita) -->
+                <div class="marquee-row marquee-right">
+                    <div class="marquee-content">
+                        <div class="client-card">EMPRESA 6</div>
+                        <div class="client-card">EMPRESA 7</div>
+                        <div class="client-card">EMPRESA 8</div>
+                        <div class="client-card">EMPRESA 9</div>
+                        <div class="client-card">EMPRESA 10</div>
+                    </div>
+                    <div class="marquee-content" aria-hidden="true">
+                        <div class="client-card">EMPRESA 6</div>
+                        <div class="client-card">EMPRESA 7</div>
+                        <div class="client-card">EMPRESA 8</div>
+                        <div class="client-card">EMPRESA 9</div>
+                        <div class="client-card">EMPRESA 10</div>
+                    </div>
                 </div>
+            </div>
+
+            <div class="container clients-action fade-up delay-3">
+                <a href="https://wa.me/5511964625127" target="_blank" class="btn-pill-cta btn-primary-override">
+                    Solicite um orçamento 
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
             </div>
         </section>
 
