@@ -46,6 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                
+                // If it's a stat item, trigger number animation
+                const statNumber = entry.target.querySelector('.stat-number');
+                if (statNumber) {
+                    animateValue(statNumber);
+                }
+                
                 observer.unobserve(entry.target); // Animates only once
             }
         });
@@ -53,4 +60,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fadeElements = document.querySelectorAll('.fade-up');
     fadeElements.forEach(el => observer.observe(el));
+    
+    // Number animation function
+    function animateValue(obj) {
+        const target = parseInt(obj.getAttribute('data-target'));
+        const suffix = obj.getAttribute('data-suffix') || '';
+        const duration = 2000; // 2 seconds
+        let startTimestamp = null;
+        
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            
+            // Ease out quad
+            const easeProgress = progress * (2 - progress);
+            
+            obj.innerHTML = Math.floor(easeProgress * target) + suffix;
+            
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                obj.innerHTML = target + suffix;
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
 });
