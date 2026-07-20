@@ -749,23 +749,31 @@ ul {
 
 /* Luxury CTA Section */
 .cta-section-luxury {
-    padding: 140px 0;
+    padding: 80px 0 60px;
     background-color: var(--color-surface);
     display: flex;
     justify-content: center;
 }
 
 .cta-luxury-card {
-    background: var(--color-white);
+    background: linear-gradient(120deg, #ffffff, #f8fafc, #ffffff, #f1f5f9);
+    background-size: 300% 300%;
+    animation: cta-bg-flow 15s ease infinite;
     border-radius: 40px;
-    padding: 80px 60px;
+    padding: 120px 80px;
     text-align: center;
-    max-width: 900px;
+    width: 100%;
     margin: 0 auto;
     box-shadow: 0 40px 100px rgba(13, 43, 89, 0.08);
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(13, 43, 89, 0.05);
+}
+
+@keyframes cta-bg-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .cta-luxury-card::before {
@@ -780,42 +788,14 @@ ul {
     opacity: 0.5;
 }
 
-.cta-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(13, 43, 89, 0.05);
-    color: var(--color-primary);
-    padding: 8px 16px;
-    border-radius: 100px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 30px;
-}
-
-.pulse-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #10b981;
-    border-radius: 50%;
-    box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
-    animation: pulse-dot 2s infinite;
-}
-
-@keyframes pulse-dot {
-    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-}
 
 .cta-luxury-card h2 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     color: var(--color-text-main);
     line-height: 1.1;
     margin-bottom: 24px;
     font-weight: 500;
+    letter-spacing: -0.02em;
 }
 
 .cta-luxury-card p {
