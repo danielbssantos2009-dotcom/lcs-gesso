@@ -124,6 +124,19 @@ ul {
     box-shadow: var(--shadow-lg);
 }
 
+.btn-dark {
+    background-color: #0f172a;
+    color: var(--color-white);
+    border-radius: 100px;
+    padding: 14px 32px;
+}
+
+.btn-dark:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 /* Hero Wrapper & Video Section */
 .hero-wrapper {
     padding: 0;
@@ -646,7 +659,7 @@ ul {
 .services-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     margin-bottom: 60px;
     gap: 40px;
 }
@@ -691,7 +704,7 @@ ul {
 
 .service-img-wrapper {
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 4/5;
     border-radius: 20px;
     overflow: hidden;
 }
