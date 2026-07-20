@@ -749,50 +749,30 @@ ul {
 
 /* Luxury CTA Section */
 .cta-section-luxury {
-    padding: 80px 0 60px;
-    background-color: var(--color-surface);
+    padding: 120px 0 60px;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 1;
 }
 
 .cta-luxury-card {
-    background: linear-gradient(120deg, #ffffff, #f8fafc, #ffffff, #f1f5f9);
-    background-size: 300% 300%;
-    animation: cta-bg-flow 15s ease infinite;
-    border-radius: 40px;
-    padding: 120px 80px;
     text-align: center;
     width: 100%;
-    margin: 0 auto;
-    box-shadow: 0 40px 100px rgba(13, 43, 89, 0.08);
     position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(13, 43, 89, 0.05);
 }
 
-@keyframes cta-bg-flow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.cta-luxury-card .reveal-up {
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.cta-luxury-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-primary-light), transparent);
-    opacity: 0.5;
-}
 
 
 .cta-luxury-card h2 {
-    font-size: 4.5rem;
+    font-size: 3.2rem;
     color: var(--color-text-main);
-    line-height: 1.1;
+    line-height: 1.15;
     margin-bottom: 24px;
     font-weight: 500;
     letter-spacing: -0.02em;
@@ -826,7 +806,7 @@ ul {
     font-size: 1.125rem;
     font-weight: 600;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 20px 40px rgba(13, 43, 89, 0.2);
 }
 
@@ -849,7 +829,7 @@ ul {
 }
 
 .btn-luxury:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px) scale(1.05);
     box-shadow: 0 30px 60px rgba(13, 43, 89, 0.3);
     background-color: #0b1f3d;
 }
@@ -885,10 +865,11 @@ ul {
 /* Footer */
 .footer {
     position: relative;
-    background: linear-gradient(to bottom, #dbe4ef 0%, #305487 30%, #0a172a 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #dbe4ef 10%, #305487 45%, #0a172a 100%);
     color: #f1f5f9;
     padding: 100px 0 0;
     overflow: hidden;
+    margin-top: -1px;
 }
 
 .footer-content-grid {
@@ -1188,12 +1169,11 @@ ul {
     }
     
     .cta-section-luxury {
-        padding: 80px 0;
+        padding: 80px 0 40px;
     }
 
     .cta-luxury-card {
-        padding: 50px 24px;
-        border-radius: 24px;
+        padding: 0 24px;
     }
 
     .cta-luxury-card h2 {
