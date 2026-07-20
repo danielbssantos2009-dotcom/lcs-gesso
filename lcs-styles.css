@@ -561,11 +561,38 @@ ul {
 
 /* About Section - Split Panel Design */
 .about-section {
-    padding: 60px 0 100px 0;
+    padding: 80px 0 100px 0;
     background-color: var(--color-surface);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-deco {
+    position: absolute;
+    top: 50%;
+    font-size: 8vw;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: rgba(15, 23, 42, 0.03);
+    white-space: nowrap;
+    pointer-events: none;
+    letter-spacing: -0.05em;
+    z-index: 0;
+}
+
+.about-deco-left {
+    left: -3vw;
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.about-deco-right {
+    right: -3vw;
+    transform: translateY(-50%) rotate(90deg);
 }
 
 .about-panels-wrapper {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
