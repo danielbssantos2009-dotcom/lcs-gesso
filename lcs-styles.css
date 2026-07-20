@@ -348,7 +348,50 @@ ul {
 .btn-pill-cta:hover .btn-pill-icon {
     background-color: var(--color-primary-hover);
 }
+/* Stats Section */
+.stats-section {
+    padding: 80px 0 60px;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+}
 
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 0 40px;
+    position: relative;
+}
+
+.stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background-color: var(--color-border);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 15px;
+    line-height: 1;
+    font-family: var(--font-heading);
+}
+
+.stat-text {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
 
 
 /* Clients Section */
@@ -735,9 +778,40 @@ ul {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+    .stats-container {
+        flex-wrap: wrap;
+        gap: 40px 0;
+    }
+
+    .stat-item {
+        flex: 0 0 50%;
+        padding: 0 20px;
+    }
+
+    .stat-item:nth-child(2)::after {
+        display: none; /* Remove border after 2nd item on tablet */
+    }
+
+    .stat-item:not(:last-child)::after {
+        top: 0;
+        height: 100%;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+    .stats-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .stat-item {
+        flex: 0 0 100%;
+        padding: 0;
+    }
+
+    .stat-item::after {
+        display: none !important; /* Remove all vertical borders on mobile */
+    }
     .nav-links {
         display: none;
     }
