@@ -136,14 +136,7 @@ ul {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: #111;
-}
-
-.hero-video-fallback {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: url('assets/images/hero.jpg') center/cover no-repeat;
-    z-index: 0;
+    background-color: var(--color-bg);
 }
 
 .hero-bg-video {

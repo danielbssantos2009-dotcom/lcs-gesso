@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Video fade on scroll
-    const heroVideo = document.getElementById('heroVideo');
-    const heroFallback = document.querySelector('.hero-video-fallback');
-    if (heroVideo || heroFallback) {
+    const heroSection = document.querySelector('.hero-video-section');
+    if (heroSection) {
         window.addEventListener('scroll', () => {
             // Fades from 1 to 0 as you scroll down the height of the screen
             let scrollY = window.scrollY;
@@ -11,8 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (opacity < 0) opacity = 0;
             if (opacity > 1) opacity = 1;
             
-            if (heroVideo) heroVideo.style.opacity = opacity;
-            if (heroFallback) heroFallback.style.opacity = opacity;
+            heroSection.style.opacity = opacity;
         });
     }
 
