@@ -773,15 +773,26 @@ ul {
     font-size: 3.2rem;
     color: var(--color-text-main);
     line-height: 1.15;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
     font-weight: 500;
     letter-spacing: -0.02em;
+    max-width: 700px;
+    background: linear-gradient(90deg, var(--color-text-main) 0%, #305487 50%, var(--color-text-main) 100%);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: text-shine 5s linear infinite;
+}
+
+@keyframes text-shine {
+    to { background-position: 200% center; }
 }
 
 .cta-luxury-card p {
     font-size: 1.25rem;
     color: var(--color-text-light);
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto 40px;
     line-height: 1.6;
 }
@@ -807,7 +818,14 @@ ul {
     font-weight: 600;
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 20px 40px rgba(13, 43, 89, 0.2);
+    box-shadow: 0 0 0 0 rgba(11, 31, 61, 0.4);
+    animation: btn-pulse-shadow 3s infinite;
+}
+
+@keyframes btn-pulse-shadow {
+    0% { box-shadow: 0 0 0 0 rgba(11, 31, 61, 0.4), 0 20px 40px rgba(13, 43, 89, 0.2); }
+    70% { box-shadow: 0 0 0 15px rgba(11, 31, 61, 0), 0 20px 40px rgba(13, 43, 89, 0.2); }
+    100% { box-shadow: 0 0 0 0 rgba(11, 31, 61, 0), 0 20px 40px rgba(13, 43, 89, 0.2); }
 }
 
 .btn-luxury-text {
@@ -826,6 +844,12 @@ ul {
     width: 36px;
     height: 36px;
     transition: transform 0.4s ease;
+    animation: icon-bounce 2s ease-in-out infinite;
+}
+
+@keyframes icon-bounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
 }
 
 .btn-luxury:hover {
