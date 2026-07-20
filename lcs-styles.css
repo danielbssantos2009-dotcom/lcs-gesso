@@ -572,11 +572,11 @@ ul {
 
 .about-deco {
     position: absolute;
-    top: 50%;
-    font-size: 6vw;
+    top: 35%;
+    font-size: 6rem;
     font-family: var(--font-heading);
     font-weight: 800;
-    color: rgba(15, 23, 42, 0.08);
+    color: rgba(15, 23, 42, 0.04);
     white-space: nowrap;
     pointer-events: none;
     letter-spacing: 0.1em;
@@ -584,12 +584,12 @@ ul {
 }
 
 .about-deco-left {
-    left: 2vw;
+    left: -2rem;
     transform: translateY(-50%) rotate(-90deg);
 }
 
 .about-deco-right {
-    right: 2vw;
+    right: -2rem;
     transform: translateY(-50%) rotate(90deg);
 }
 
