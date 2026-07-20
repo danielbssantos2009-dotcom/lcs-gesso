@@ -159,66 +159,56 @@ ul {
     z-index: 2;
 }
 
-/* Floating Navbar */
-.navbar-floating {
-    position: relative;
-    z-index: 10;
+/* Static Navbar */
+.navbar-static {
     width: 100%;
-    padding: 24px 40px;
+    padding: 24px 0;
+    background-color: var(--color-white);
 }
 
-.navbar-content-floating {
+.navbar-content-static {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 100px;
-    padding: 12px 24px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
 }
 
-.logo-white {
+.logo-dark {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.5rem;
-    color: var(--color-white);
+    color: var(--color-primary);
 }
 
-.nav-links-pill {
+.nav-links-dark {
     display: flex;
     gap: 32px;
-    background: rgba(255,255,255,0.9);
-    padding: 10px 32px;
-    border-radius: 100px;
 }
 
-.nav-links-pill a {
+.nav-links-dark a {
     font-weight: 600;
     color: var(--color-text-main);
     font-size: 0.95rem;
 }
 
-.nav-links-pill a:hover {
+.nav-links-dark a:hover {
     color: var(--color-primary);
 }
 
-.btn-nav-circle {
+.btn-nav-circle-dark {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.9);
-    color: var(--color-text-main);
+    background: var(--color-primary);
+    color: var(--color-white);
     transition: all 0.3s ease;
 }
 
-.btn-nav-circle:hover {
+.btn-nav-circle-dark:hover {
     transform: scale(1.05);
-    background: var(--color-white);
-    color: var(--color-primary);
+    background: var(--color-primary-hover);
 }
 
 /* New Hero Content */
@@ -311,43 +301,7 @@ ul {
     background-color: var(--color-primary-hover);
 }
 
-/* Circular Badge */
-.hero-circular-badge {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0,0.4);
-    border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.2);
-    backdrop-filter: blur(5px);
-    animation: rotateSlow 20s linear infinite;
-    z-index: 20;
-}
 
-.hero-circular-badge svg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.arrow-down {
-    animation: bounce 2s infinite ease-in-out;
-}
-
-@keyframes rotateSlow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(5px); }
-}
 
 /* Clients Section */
 .clients-section {
