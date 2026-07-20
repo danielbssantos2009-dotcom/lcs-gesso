@@ -233,8 +233,9 @@ ul {
     flex: 1;
     display: flex;
     align-items: flex-end;
-    padding-bottom: 80px;
-    justify-content: space-between;
+    padding: 0 80px 80px 80px;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .hero-text-new {
@@ -265,7 +266,7 @@ ul {
 }
 
 .hero-text-new h1 {
-    font-size: 4.5rem;
+    font-size: 3.6rem;
     color: var(--color-white);
     line-height: 1.1;
     margin-bottom: 24px;
@@ -273,7 +274,7 @@ ul {
 }
 
 .subtitle-new {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     opacity: 0.9;
     max-width: 600px;
     margin-bottom: 48px;
@@ -306,18 +307,20 @@ ul {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background-color: #F97316;
+    background-color: var(--color-primary);
     color: var(--color-white);
     transition: background-color 0.3s ease;
 }
 
 .btn-pill-cta:hover .btn-pill-icon {
-    background-color: #ea580c;
+    background-color: var(--color-primary-hover);
 }
 
 /* Circular Badge */
 .hero-circular-badge {
-    position: relative;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
     width: 120px;
     height: 120px;
     display: flex;
@@ -327,9 +330,8 @@ ul {
     border-radius: 50%;
     border: 1px solid rgba(255,255,255,0.2);
     backdrop-filter: blur(5px);
-    margin-bottom: 20px;
-    margin-right: 20px;
     animation: rotateSlow 20s linear infinite;
+    z-index: 20;
 }
 
 .hero-circular-badge svg {
