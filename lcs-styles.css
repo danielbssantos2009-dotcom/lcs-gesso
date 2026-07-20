@@ -465,13 +465,15 @@ ul {
 }
 
 .btn-primary-override {
-    background-color: var(--color-primary) !important;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover)) !important;
     color: var(--color-white) !important;
     border: none !important;
+    box-shadow: 0 8px 20px rgba(13, 43, 89, 0.25) !important;
 }
 
 .btn-primary-override:hover {
-    background-color: var(--color-primary-hover) !important;
+    box-shadow: 0 12px 25px rgba(13, 43, 89, 0.4) !important;
+    transform: translateY(-3px) scale(1.02) !important;
 }
 
 /* About Section */
