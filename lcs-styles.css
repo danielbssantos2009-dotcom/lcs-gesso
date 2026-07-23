@@ -549,9 +549,6 @@ ul {
     justify-content: center;
     width: 250px;
     height: 120px;
-    background-color: var(--color-bg); 
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.25rem;
@@ -559,12 +556,11 @@ ul {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: all 0.3s ease;
-    box-shadow: var(--shadow-sm);
 }
 
 .client-logo {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
     filter: grayscale(100%) opacity(70%);
     transition: all 0.3s ease;
@@ -573,13 +569,6 @@ ul {
 .client-card:hover .client-logo {
     filter: grayscale(0%) opacity(100%);
     transform: scale(1.05);
-}
-
-.client-card:hover {
-    border-color: var(--color-primary-light);
-    color: var(--color-primary);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
 }
 
 .btn-primary-override {
