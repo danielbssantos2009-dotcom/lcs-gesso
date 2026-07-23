@@ -547,7 +547,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 80px; /* Increased padding for larger logos */
+    padding: 0 50px; /* Reduced padding since logos have fixed widths now */
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.25rem;
@@ -558,15 +558,13 @@ ul {
 }
 
 .client-logo {
-    height: 240px; /* Doubled logo size for massive impact */
-    width: auto;
+    width: 220px;
+    height: 140px;
     object-fit: contain;
-    filter: grayscale(100%) opacity(70%);
     transition: all 0.3s ease;
 }
 
 .client-card:hover .client-logo {
-    filter: grayscale(0%) opacity(100%);
     transform: scale(1.05);
 }
 
