@@ -376,6 +376,7 @@ ul {
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 .btn-pill-cta:hover {
@@ -525,11 +526,11 @@ ul {
 
 /* Animations */
 .marquee-left {
-    animation: scroll-left 18s linear infinite;
+    animation: scroll-left 12s linear infinite; /* Sped up */
 }
 
 .marquee-right {
-    animation: scroll-right 35s linear infinite;
+    animation: scroll-right 15s linear infinite; /* Sped up */
 }
 
 @keyframes scroll-left {
@@ -1288,6 +1289,24 @@ ul {
         font-size: 2rem;
     }
 
+    /* Mobile Navbar Thin/Minimalist */
+    .navbar-glass {
+        padding: 10px 0;
+    }
+    
+    .navbar-content-glass {
+        padding: 6px 16px;
+    }
+    
+    .logo-white, .logo-dark {
+        width: 120px; /* Smaller logo for thinner navbar */
+    }
+
+    .btn-nav-contact {
+        padding: 6px 16px;
+        font-size: 0.8rem;
+    }
+
     /* Mobile Hero Overrides */
     .hero-content-new {
         padding: 40px 24px 0 24px;
@@ -1327,6 +1346,16 @@ ul {
         background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%); /* Stronger vertical gradient for legibility */
     }
     
+    /* Decrease space between logos in mobile */
+    .client-card {
+        padding: 0 10px;
+    }
+    
+    .client-logo {
+        width: 200px;
+        height: 120px;
+    }
+
     .cta-section-luxury {
         padding: 80px 0 40px;
     }
