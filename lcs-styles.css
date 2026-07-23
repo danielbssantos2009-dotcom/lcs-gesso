@@ -1346,6 +1346,36 @@ ul {
         background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%); /* Stronger vertical gradient for legibility */
     }
     
+    /* Mobile Stats Overrides */
+    .stats-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .stat-item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 20px;
+        padding: 0 16px;
+    }
+
+    .stat-number {
+        font-size: 2.6rem;
+        margin-bottom: 0;
+        flex: 0 0 100px; /* Fixed width for numbers to align all texts */
+        text-align: right;
+    }
+
+    .stat-text {
+        font-size: 0.95rem;
+    }
+
+    .stat-item::after {
+        display: none !important; /* Hide vertical borders */
+    }
+
     /* Decrease space between logos in mobile */
     .client-card {
         padding: 0 10px;
