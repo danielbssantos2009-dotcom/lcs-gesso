@@ -1356,6 +1356,19 @@ ul {
         height: 120px;
     }
 
+    .clients-section {
+        text-align: left;
+    }
+
+    .clients-section .section-title {
+        font-size: 2rem;
+    }
+
+    .clients-section .section-description {
+        margin: 0 0 40px 0;
+        font-size: 1rem;
+    }
+
     .cta-section-luxury {
         padding: 80px 0 40px;
     }
