@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="lcs-styles.css?v=70">
+    <link rel="stylesheet" href="lcs-styles.css?v=71">
 </head>
 <body>
 
@@ -160,8 +160,17 @@
                 </div>
             </div>
             
+            <div class="container services-carousel-nav hide-on-desktop fade-up delay-1">
+                <button class="carousel-btn prev" id="servPrev" aria-label="Anterior">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="carousel-btn next" id="servNext" aria-label="Próximo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+            </div>
+
             <div class="container">
-                <div class="services-grid fade-up delay-1">
+                <div class="services-grid fade-up delay-1" id="servicesGrid">
                     
                     <div class="service-card reveal-up inner-delay-1">
                         <div class="service-img-wrapper scale-img">
@@ -317,6 +326,6 @@
         <div class="footer-watermark">lcs gesso</div>
     </footer>
 
-    <script src="script.js?v=8"></script>
+    <script src="script.js?v=9"></script>
 </body>
 </html>

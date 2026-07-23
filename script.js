@@ -35,6 +35,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Services Carousel Navigation (Mobile)
+    const servPrev = document.getElementById('servPrev');
+    const servNext = document.getElementById('servNext');
+    const servicesGrid = document.getElementById('servicesGrid');
+
+    if (servPrev && servNext && servicesGrid) {
+        servNext.addEventListener('click', () => {
+            const cardWidth = servicesGrid.querySelector('.service-card').offsetWidth;
+            const gap = 20; // from CSS gap: 20px
+            servicesGrid.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
+        });
+
+        servPrev.addEventListener('click', () => {
+            const cardWidth = servicesGrid.querySelector('.service-card').offsetWidth;
+            const gap = 20;
+            servicesGrid.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+        });
+    }
+
     // Intersection Observer for fade-up animations
     const observerOptions = {
         root: null,
