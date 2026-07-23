@@ -1276,19 +1276,6 @@ ul {
 }
 
 @media (max-width: 480px) {
-    .stats-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .stat-item {
-        flex: 0 0 100%;
-        padding: 0;
-    }
-
-    .stat-item::after {
-        display: none !important; /* Remove all vertical borders on mobile */
-    }
     .nav-links {
         display: none;
     }
