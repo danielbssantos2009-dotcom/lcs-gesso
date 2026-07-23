@@ -1289,22 +1289,24 @@ ul {
         font-size: 2rem;
     }
 
-    /* Mobile Navbar Thin/Minimalist */
+    /* Mobile Navbar Thin/Minimalist & Floating */
     .navbar-glass {
-        padding: 10px 0;
+        padding: 12px 0;
     }
     
     .navbar-content-glass {
-        padding: 6px 16px;
+        padding: 6px 12px;
+        max-width: calc(100% - 32px); /* Creates 16px gap on left/right so it floats */
+        margin: 0 auto; /* Centers the floating pill */
     }
     
     .logo-white, .logo-dark {
-        width: 120px; /* Smaller logo for thinner navbar */
+        width: 90px; /* Extremely small/minimalist logo */
     }
 
     .btn-nav-contact {
-        padding: 6px 16px;
-        font-size: 0.8rem;
+        padding: 5px 12px;
+        font-size: 0.75rem;
     }
 
     /* Mobile Hero Overrides */
