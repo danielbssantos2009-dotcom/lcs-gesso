@@ -562,6 +562,19 @@ ul {
     box-shadow: var(--shadow-sm);
 }
 
+.client-logo {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(70%);
+    transition: all 0.3s ease;
+}
+
+.client-card:hover .client-logo {
+    filter: grayscale(0%) opacity(100%);
+    transform: scale(1.05);
+}
+
 .client-card:hover {
     border-color: var(--color-primary-light);
     color: var(--color-primary);
