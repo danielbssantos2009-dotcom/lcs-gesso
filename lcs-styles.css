@@ -612,34 +612,17 @@ ul {
 .about-section {
     padding: 80px 0 100px 0;
     background-color: var(--color-surface);
-    background-image: linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    background-position: center center;
     position: relative;
     overflow: hidden;
 }
 
-.about-deco {
-    position: absolute;
-    top: 35%;
-    font-size: 6rem;
-    font-family: var(--font-heading);
-    font-weight: 800;
-    color: rgba(15, 23, 42, 0.04);
-    white-space: nowrap;
-    pointer-events: none;
-    letter-spacing: 0.1em;
-    z-index: 0;
+#animate-text .word {
+    color: rgba(13, 43, 89, 0.25); /* Faded but not invisible, based on primary color */
+    transition: color 0.4s ease;
 }
 
-.about-deco-left {
-    left: -2rem;
-    transform: translateY(-50%) rotate(-90deg);
-}
-
-.about-deco-right {
-    right: -2rem;
-    transform: translateY(-50%) rotate(90deg);
+#animate-text .word.active {
+    color: var(--color-primary); /* Original color */
 }
 
 .about-panels-wrapper {

@@ -85,4 +85,36 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         window.requestAnimationFrame(step);
     }
+    
+    // Text reveal word by word on scroll
+    const textToAnimate = document.getElementById('animate-text');
+    if (textToAnimate) {
+        const words = textToAnimate.querySelectorAll('.word');
+        const totalWords = words.length;
+
+        window.addEventListener('scroll', () => {
+            const rect = textToAnimate.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Animation start and end boundaries relative to viewport
+            const start = windowHeight * 0.9;
+            const end = windowHeight * 0.3;
+            
+            let progress = (start - rect.top) / (start - end);
+            progress = Math.max(0, Math.min(1, progress));
+            
+            const activeCount = Math.floor(progress * totalWords);
+            
+            words.forEach((word, index) => {
+                if (index < activeCount) {
+                    word.classList.add('active');
+                } else {
+                    word.classList.remove('active');
+                }
+            });
+        });
+        
+        // Initial trigger
+        window.dispatchEvent(new Event('scroll'));
+    }
 });
