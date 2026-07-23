@@ -1287,6 +1287,45 @@ ul {
     .hero-text h1 {
         font-size: 2rem;
     }
+
+    /* Mobile Hero Overrides */
+    .hero-content-new {
+        padding: 40px 24px 0 24px;
+    }
+
+    .badge-new {
+        font-size: 0.75rem;
+        padding: 6px 16px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text-new h1 {
+        font-size: 2.2rem; /* Reduced to fit 'Acabamentos' */
+        line-height: 1.15;
+        word-break: break-word; /* Ensure long words don't overflow */
+        hyphens: auto;
+    }
+
+    .subtitle-new {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+    .btn-pill-cta {
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 24px;
+    }
+
+    .hero-bg-video {
+        object-position: 70% center; /* Adjust crop to show more relevant action */
+    }
+
+    .hero-overlay {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%); /* Stronger vertical gradient for legibility */
+    }
     
     .cta-section-luxury {
         padding: 80px 0 40px;
