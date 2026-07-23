@@ -525,7 +525,7 @@ ul {
 
 /* Animations */
 .marquee-left {
-    animation: scroll-left 30s linear infinite;
+    animation: scroll-left 18s linear infinite;
 }
 
 .marquee-right {
@@ -547,7 +547,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 50px; /* Reduced padding since logos have fixed widths now */
+    padding: 0 20px; /* Decreased padding to reduce space between logos */
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.25rem;
@@ -558,8 +558,8 @@ ul {
 }
 
 .client-logo {
-    width: 220px;
-    height: 140px;
+    width: 320px; /* Increased width proportionally */
+    height: 200px; /* Increased height proportionally */
     object-fit: contain;
     transition: all 0.3s ease;
 }
