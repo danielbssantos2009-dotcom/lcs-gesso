@@ -1377,13 +1377,18 @@ ul {
     }
 
     /* Decrease space between logos in mobile */
+    .marquee-content {
+        gap: 10px;
+        padding-right: 10px;
+    }
+
     .client-card {
-        padding: 0 10px;
+        padding: 0 5px;
     }
     
     .client-logo {
-        width: 200px;
-        height: 120px;
+        width: 250px;
+        height: 150px;
     }
 
     .clients-section {
