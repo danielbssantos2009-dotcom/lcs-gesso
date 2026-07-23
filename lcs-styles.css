@@ -1237,13 +1237,13 @@ ul {
         gap: 40px;
     }
     .stats-container {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 40px 0;
     }
 
     .stat-item {
-        flex: 0 0 50%;
-        padding: 0 20px;
+        padding: 0 15px;
     }
 
     .stat-item:nth-child(2)::after {
