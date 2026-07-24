@@ -218,8 +218,8 @@ ul {
     justify-content: center;
     position: relative;
     text-decoration: none;
-    height: 36px;
-    width: 100px;
+    height: 46px;
+    width: 160px;
 }
 
 .logo-white, .logo-dark {
@@ -1353,7 +1353,12 @@ ul {
     }
     
     .logo-white, .logo-dark {
-        width: 90px; /* Extremely small/minimalist logo */
+        width: 100px; /* Extremely small/minimalist logo */
+    }
+
+    .logo {
+        width: 100px;
+        height: 30px;
     }
 
     .btn-nav-contact {
